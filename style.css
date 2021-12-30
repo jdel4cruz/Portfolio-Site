@@ -1,20 +1,35 @@
-html {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-size: 100%;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: rgb(114, 114, 114);
 }
 
 ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+ul li {
+  padding: 20px 0;
+}
+
+ul button:hover {
+  background-color: grey;
 }
 
 .container {
   display: flex;
-  height: 100%;
 }
 
 .sidebar {
@@ -22,25 +37,216 @@ ul {
   flex-flow: column nowrap;
   justify-content: space-between;
   position: sticky;
+  top: 0;
+  background-color: #99a6b3;
 
-  height: 100%;
-  width: 20%;
+  min-width: 15%;
+  max-height: 100vh;
+}
+
+.homeImg {
+  width: 100%;
+  height: auto;
+}
+
+.nav-links,
+.additional-links {
+  display: flex;
+}
+
+.nav-links li,
+.additional-links li {
+  padding: 0;
+}
+
+.nav-links a,
+.additional-links a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-links {
+  flex-flow: column nowrap;
+  text-align: center;
+}
+
+.nav-links a {
+  padding: 20px 0;
+  display: block;
+  height: auto;
+  font-size: 2vw;
+}
+
+.nav-links a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.additional-links {
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.additional-links li {
+  display: inline-block;
+  text-align: center;
+}
+
+.additional-links img {
+  height: 60%;
+  width: auto;
+}
+
+.additional-links img:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .content {
   overflow: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 12rem;
 }
 
-table th {
-  column-span: 4;
+.content-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
+
+.home-content,
+.about-content {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  justify-content: space-between;
+  align-items: end;
+  width: 90%;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 4rem;
+
+  gap: 12rem;
+  width: 50%;
+}
+
+.hero-text .desc {
+  font-size: 2.5rem;
+}
+
+.hero-text p {
+  margin: 0;
+  padding: 0;
+}
+
+.home-img {
+  background-color: white;
+  width: 40%;
+  height: 80%;
+}
+.projects-content,
+.contact-content {
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.contact-content {
+  align-items: start;
+  gap: 20px;
+}
+
+.projects-content {
+  gap: 5rem;
+}
+
+.about-content {
+  flex-flow: column nowrap;
+  font-size: 2rem;
+}
+
+table {
+  background-color: rgb(116, 116, 124);
+  width: 80%;
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  font-size: 1.5rem;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+table tbody tr:nth-of-type(odd) {
+  background-color: darkgray;
+}
+
+tbody {
+  border-top: 2px solid black;
+}
+
+tr td:first-of-type {
+  border-right: 2px solid black;
+  width: 20%;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.divider {
+  border-bottom: 1px solid bisque;
+}
+/* 
 .project {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+} */
+
+.project {
+  display: grid;
+  grid-template-rows: repeat(4, 25% [row-start]);
+  grid-template-columns: [first] 20% [second] 80%;
+  gap: 0 1rem;
 }
 
 .project img {
-  display: inline;
-  margin-right: 3rem;
+  width: 100%;
+  height: auto;
+
+  grid-row: 1/5;
+  grid-template-columns: 1/2;
+}
+
+.project p {
+  margin: 0;
+
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+
+.labels {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+
+.label {
+  border: 1px solid beige;
+  border-radius: 36px;
+  padding: 5px 10px;
 }
 
 .contact-form {

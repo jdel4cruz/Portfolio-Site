@@ -6,122 +6,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <div class="sidebar">
-        <a href="#home"><img src="" alt="Home Logo" /></a>
+      <nav class="sidebar">
+        <a href="#home"
+          ><img class="homeImg" src="./images/dev.png" alt="Home Logo"
+        /></a>
 
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects/skills">Projects/Skills</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li>
+            <a href="#projects/skills">Projects/Skills</a>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-        <div class="additional links">
-          <a href=""><img src="" alt="Github link" /></a>
-          <a href=""><img src="" alt="LinkedIn link" /></a>
-        </div>
-      </div>
+        <ul class="additional-links">
+          <li>
+            <a href=""><img src="./images/github.png" alt="Github link" /></a>
+          </li>
+
+          <li>
+            <a href=""
+              ><img src="./images/linkedin.png" alt="LinkedIn link"
+            /></a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="content">
-        <div class="content-container" id="#home">
-          <div id="home-content"></div>
-        </div>
-        <div class="content-container" id="about">
-          <div id="about-content">
-            <div id="about-img">
-              <img src="" alt="about img" />
+        <section class="content-container home-content" id="home">
+          <div class="hero-text">
+            <div>
+              <p class="name">John De La Cruz</p>
+              <p class="title">Web Developer</p>
             </div>
-            <div id="about-text">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolore, animi! Nihil unde molestiae velit eligendi voluptatibus
-                ab fuga, non temporibus quod architecto inventore eius? Iure
-                dicta cupiditate in aut asperiores!
-              </p>
+
+            <p class="desc">
+              Former engineer driven by the pursuit of knowledge. Seeking new
+              opportunities in the vast world of web development.
+            </p>
+          </div>
+          <div class="home-img"></div>
+        </section>
+        <section class="content-container about-content" id="about">
+          <p>
+            My name is John De La Cruz and I like learning new things. Having
+            felt restrained in my former career as an engineer, I decided that
+            it was not the path for me and decided to search for a career where
+            I have the freedom both to create and expand my skillset as an
+            individual.
+          </p>
+          <p>
+            During my time as a student, tasks that involved coding managed to
+            maintain my interest so I figured that was a good place to start.
+            Combining that with my desire to create things, it seemed like
+            front-end web development might fit the bill. When looking into
+            online courses, I found an online bootcamp on Udemy for 80% off and
+            figured it be as good a place to start as any. And the rest is
+            history.
+          </p>
+        </section>
+        <section
+          class="content-container projects-content"
+          id="projects/skills"
+        >
+          <table class="skills">
+            <thead>
+              <tr>
+                <th colspan="5">Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Languages</td>
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>Javascript</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Frontend Tools</td>
+                <td>ReactJS</td>
+                <td>Bootstrap</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Backend Tools</td>
+                <td>Node</td>
+                <td>NPM</td>
+                <td>Express</td>
+                <td>Mongoose</td>
+              </tr>
+              <tr>
+                <td>Databases</td>
+                <td>Mongo</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+          <div class="projects">
+            <ul>
+              <li class="project">
+                <img src="./images/placeholder.png" alt="project thumb" />
+                <p>
+                  ex veritatis dignissimos velit totam rem nihil, illum commodi
+                  ullam quidem odit perferendis laudantium maiores sunt ea
+                  necessitatibus temporibus. Excepturi, quod! Hic architecto
+                  est, voluptatibus iusto cum accusamus deserunt adipisci sequi
+                  ratione vitae, minima tempore dolorum illum ullam fugiat
+                  excepturi magni illo nesciunt. Beatae dolorum a itaque minima
+                  officiis! Quibusdam, fuga. Distinctio, autem facilis? Cum nisi
+                  assumenda molestias, voluptate ullam facere aperiam magni et,
+                  perferendis, laborum vel eligendi facilis at itaque laudantium
+                  perspiciatis soluta non adipisci amet dolorem nihil!
+                </p>
+                <div class="labels">
+                  <span class="label">TBD</span>
+                  <span class="label">Super TBD</span>
+                </div>
+              </li>
+              <div class="divider"></div>
+              <li class="project">
+                <img src="./images/placeholder.png" alt="project thumb" />
+                <p>
+                  ex veritatis dignissimos velit totam rem nihil, illum commodi
+                  ullam quidem odit perferendis laudantium maiores sunt ea
+                  necessitatibus temporibus. Excepturi, quod! Hic architecto
+                  est, voluptatibus iusto cum accusamus deserunt adipisci sequi
+                  ratione vitae, minima tempore dolorum illum ullam fugiat
+                  excepturi magni illo nesciunt. Beatae dolorum a itaque minima
+                  officiis! Quibusdam, fuga. Distinctio, autem facilis? Cum nisi
+                  assumenda molestias, voluptate ullam facere aperiam magni et,
+                  perferendis, laborum vel eligendi facilis at itaque laudantium
+                  perspiciatis soluta non adipisci amet dolorem nihil!
+                </p>
+                <div class="labels">
+                  <span class="label">TBD</span>
+                  <span class="label">Super TBD</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="content-container contact-content" id="contact">
+          <div>Contact</div>
+          <p>
+            I'm interested in web dev opportunities, but if you would like to
+            ask me general questions feel free to contact me via the form below.
+          </p>
+          <form class="contact-form" action="">
+            <div class="contact-input" id="input-name">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Name" />
             </div>
-          </div>
-        </div>
-        <div class="content-container" id="projects/skills">
-          <div id="project/skills-content">
-            <table id="skills">
-              <thead>
-                <tr>
-                  <th colspan="4">Skills</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Languages:</td>
-                  <td>HTML</td>
-                  <td>CSS</td>
-                  <td>Javascript</td>
-                </tr>
-                <tr>
-                  <td>Frontend Tools:</td>
-                  <td>Bootstrap</td>
-                  <td>ReactJS</td>
-                </tr>
-                <tr>
-                  <td>Backend Tools:</td>
-                  <td>Node</td>
-                  <td>NPM</td>
-                  <td>Express</td>
-                  <td>Mongoose</td>
-                </tr>
-                <tr>
-                  <td>Databases:</td>
-                  <td>Mongo</td>
-                </tr>
-              </tbody>
-            </table>
-            <div id="projects">
-              <ul>
-                <li class="project">
-                  <img src="" alt="project thumb" />
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odit voluptas dolorem cum quis earum perspiciatis! Nisi
-                    commodi esse consequatur! Obcaecati excepturi nostrum
-                    possimus! Harum odio quaerat commodi fugit voluptas
-                    molestiae.
-                  </p>
-                </li>
-              </ul>
+            <div class="contact-input" id="input-email">
+              <label for="email">Email</label>
+              <input id="email" type="text" placeholder="Email" />
             </div>
-          </div>
-        </div>
-        <div class="content-container" id="contact">
-          <div class="contact-content">
-            <img class="img" src="" alt="contact img" />
-            <form class="contact-form" action="">
-              <div class="contact-input" id="input-name">
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Name" />
-              </div>
-              <div class="contact-input" id="input-email">
-                <label for="email">Email</label>
-                <input id="email" type="text" placeholder="Email" />
-              </div>
-              <div class="contact-input" id="input-subject">
-                <label for="subject">Subject</label>
-                <input id="subject" type="text" placeholder="Subject" />
-              </div>
-              <div class="contact-input" id="input-message">
-                <label for="message">Message</label>
-                <textarea
-                  name=""
-                  id="message"
-                  cols="50"
-                  rows="10"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
+            <div class="contact-input" id="input-subject">
+              <label for="subject">Subject</label>
+              <input id="subject" type="text" placeholder="Subject" />
+            </div>
+            <div class="contact-input" id="input-message">
+              <label for="message">Message</label>
+              <textarea
+                name=""
+                id="message"
+                cols="50"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+
+          <div>work email here</div>
+        </section>
       </div>
     </div>
   </body>
