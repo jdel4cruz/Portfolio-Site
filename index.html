@@ -61,67 +61,35 @@
           </div>
           <div class="home-img"></div>
         </section>
-        <section class="content-container about-content" id="about">
-          <p>
-            My name is John De La Cruz and I like learning new things. Having
-            felt restrained in my former career as an engineer, I decided that
-            it was not the path for me and decided to search for a career where
-            I have the freedom both to create and expand my skillset as an
-            individual.
-          </p>
-          <p>
-            During my time as a student, tasks that involved coding managed to
-            maintain my interest so I figured that was a good place to start.
-            Combining that with my desire to create things, it seemed like
-            front-end web development might fit the bill. When looking into
-            online courses, I found an online bootcamp on Udemy for 80% off and
-            figured it be as good a place to start as any. And the rest is
-            history.
-          </p>
-        </section>
+        <div class="about-background">
+          <section class="content-container about-content" id="about">
+            <div class="about-img"></div>
+            <div class="about-text">
+              <div>About</div>
+              <p>
+                I like learning new things. Having felt restrained in my former
+                career as an engineer, I decided that it wasn't for me and that
+                I wanted a career where I opportunites to learn are endless.
+              </p>
+              <p>
+                During school, the few coding assignments that were assigned to
+                me were interesting, so so I figured that was a good place to
+                start. Combining that with my desire to create things, it seemed
+                like front-end web development might fit the bill. When looking
+                into online courses, I found an online bootcamp on Udemy for 80%
+                off and figured it be as good a place to start as any. And the
+                rest is history.
+              </p>
+            </div>
+          </section>
+        </div>
+
         <section
           class="content-container projects-content"
           id="projects/skills"
         >
-          <table class="skills">
-            <thead>
-              <tr>
-                <th colspan="5">Skills</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Languages</td>
-                <td>HTML</td>
-                <td>CSS</td>
-                <td>Javascript</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Frontend Tools</td>
-                <td>ReactJS</td>
-                <td>Bootstrap</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Backend Tools</td>
-                <td>Node</td>
-                <td>NPM</td>
-                <td>Express</td>
-                <td>Mongoose</td>
-              </tr>
-              <tr>
-                <td>Databases</td>
-                <td>Mongo</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr></tr>
-            </tbody>
-          </table>
           <div class="projects">
+            <h2>Projects</h2>
             <ul>
               <li class="project">
                 <img src="./images/placeholder.png" alt="project thumb" />
@@ -162,7 +130,90 @@
                   <span class="label">Super TBD</span>
                 </div>
               </li>
+              <div class="divider"></div>
             </ul>
+          </div>
+          <!-- <table class="skills">
+            <thead>
+              <tr>
+                <th colspan="5">Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Languages</td>
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>Javascript</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Frontend Tools</td>
+                <td>ReactJS</td>
+                <td>Bootstrap</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Backend Tools</td>
+                <td>Node</td>
+                <td>NPM</td>
+                <td>Express</td>
+                <td>Mongoose</td>
+              </tr>
+              <tr>
+                <td>Databases</td>
+                <td>Mongo</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table> -->
+          <div class="skills">
+            <h2 class="title">Skills</h2>
+            <div class="text">
+              A ever-growing list of tools I have experience with
+            </div>
+            <div class="skill-grid">
+              <div class="skill-cell languages">
+                <div class="skill-icon">
+                  <img src="" alt="" />
+                </div>
+                <div class="skill-text">
+                  <div>Languages</div>
+                  <p>HTML, CSS, Javascript</p>
+                </div>
+              </div>
+              <div class="skill-cell frameworks">
+                <div class="skill-icon">
+                  <img src="" alt="" />
+                </div>
+                <div class="skill-text">
+                  <div>CSS/Frontend Frameworks</div>
+                  <p>Bootstrap, React, Tailwind</p>
+                </div>
+              </div>
+              <div class="skill-cell backend">
+                <div class="skill-icon">
+                  <img src="" alt="" />
+                </div>
+                <div class="skill-text">
+                  <div>Backend Tools</div>
+                  <p>Node, Express, Mongoose, React Router</p>
+                </div>
+              </div>
+              <div class="skill-cell databases">
+                <div class="skill-icon">
+                  <img src="" alt="" />
+                </div>
+                <div class="skill-text">
+                  <div>Databases</div>
+                  <p>Mongo</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="content-container contact-content" id="contact">

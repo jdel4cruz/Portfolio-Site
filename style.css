@@ -11,7 +11,7 @@ body {
   padding: 0;
   margin: 0;
 
-  background-color: rgb(114, 114, 114);
+  background-color: rgb(235, 248, 248);
 }
 
 ul {
@@ -36,12 +36,13 @@ ul button:hover {
 .hamburger-btn {
   position: fixed;
 
-  top: 1rem;
-  left: 1rem;
+  top: 3rem;
+  left: 3rem;
 
   width: 50px;
   height: 50px;
-  border: 3px solid white;
+  border: 3px solid rgb(71, 152, 151);
+  transition: all 0.25s linear;
 }
 
 .hamburger-btn .hamburger-middle {
@@ -51,8 +52,8 @@ ul button:hover {
   left: 10%;
   width: 80%;
   height: 5%;
-  background: white;
-  transition: all 1ms linear;
+  background: rgba(71, 152, 151, 1);
+  transition: all 0.3s linear;
 }
 
 .hamburger-btn .hamburger-middle::before,
@@ -61,8 +62,8 @@ ul button:hover {
   content: "";
   width: 100%;
   height: 100%;
-  background: white;
-  transition: transform 0.25s ease-in-out;
+  background: rgb(71, 152, 151);
+  transition: all 0.25s ease-in-out;
 }
 
 .hamburger-btn .hamburger-middle::before {
@@ -72,8 +73,18 @@ ul button:hover {
   transform: translateY(10px);
 }
 
+.hamburger-btn.open {
+  border: 3px solid white;
+}
+
 .hamburger-btn.open .hamburger-middle {
-  background: none;
+  background: rgba(255, 255, 255, 0);
+  transition: all 1ms linear;
+}
+
+.hamburger-btn.open .hamburger-middle::before,
+.hamburger-btn.open .hamburger-middle::after {
+  background-color: white;
 }
 
 .hamburger-btn.open .hamburger-middle::before {
@@ -91,7 +102,7 @@ ul button:hover {
   position: fixed;
   top: 0;
   left: -25%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(83, 177, 176, 0.9);
 
   min-width: 25%;
   min-height: 100vh;
@@ -102,14 +113,6 @@ ul button:hover {
 
 .sidebar.open {
   transform: translate(100%, 0%);
-}
-
-.content {
-  overflow: auto;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  row-gap: 12rem;
 }
 
 .nav-links,
@@ -165,31 +168,39 @@ ul button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.content {
+  overflow: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 .content-container {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 80%;
+  padding: 5rem 0;
 }
 
 .home-content,
 .about-content {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
+  color: rgb(71, 152, 151);
+}
+
+.home-content {
   justify-content: space-between;
   align-items: end;
+  padding: 5rem 0;
 }
 
 .hero-text {
   display: flex;
   flex-flow: column nowrap;
-  font-size: 4rem;
-
-  gap: 12rem;
+  font-size: 3rem;
   width: 50%;
-}
-
-.hero-text .desc {
-  font-size: 2.5rem;
+  padding: 5rem 0;
 }
 
 .hero-text p {
@@ -197,11 +208,42 @@ ul button:hover {
   padding: 0;
 }
 
+.hero-text .desc {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
 .home-img {
   background-color: white;
   width: 40%;
-  height: 80%;
+  height: 100%;
 }
+
+.about-background {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(195, 235, 235);
+}
+
+.about-content {
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.about-img {
+  background-color: white;
+  width: 40%;
+  height: 100%;
+}
+
+.about-text {
+  width: 50%;
+}
+
+.about-text div {
+  font-size: 3rem;
+}
+
 .projects-content,
 .contact-content {
   flex-flow: column nowrap;
@@ -213,16 +255,7 @@ ul button:hover {
   gap: 20px;
 }
 
-.projects-content {
-  gap: 5rem;
-}
-
-.about-content {
-  flex-flow: column nowrap;
-  font-size: 2rem;
-}
-
-table {
+/* table {
   background-color: rgb(116, 116, 124);
   width: 80%;
   border: 2px solid black;
@@ -252,16 +285,25 @@ tr td:first-of-type {
   width: 20%;
   font-size: 1.25rem;
   font-weight: 500;
-}
+} */
 
-.projects {
+.projects,
+.projects ul {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
+.projects h2 {
+  font-size: 3rem;
+  color: rgb(71, 152, 151);
+}
+
 .divider {
-  border-bottom: 1px solid bisque;
+  border: 2px solid rgb(84, 177, 176);
+  width: 100%;
+  border-radius: 75%;
+  margin: 3rem 0;
 }
 /* 
 .project {
@@ -295,12 +337,52 @@ tr td:first-of-type {
 .labels {
   grid-row: 4/5;
   grid-column: 2/3;
+  align-self: end;
 }
 
 .label {
-  border: 1px solid beige;
+  border: 1px solid rgb(84, 177, 176);
   border-radius: 36px;
   padding: 5px 10px;
+}
+
+.skills {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-areas:
+    "languages frameworks"
+    "backend databases";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill-cell {
+  display: flex;
+}
+
+.skill-icon {
+  height: 4rem;
+  width: 4rem;
+  background-color: rgb(71, 152, 151);
+  border-radius: 100%;
+}
+
+.skill-grid .languages {
+  grid-area: languages;
+}
+.skill-grid .css-frontend-frameworks {
+  grid-area: frameworks;
+}
+.skill-grid .backend-tools {
+  grid-area: backend;
+}
+.skill-grid .databases {
+  grid-area: databases;
 }
 
 .contact-form {
