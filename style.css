@@ -43,6 +43,7 @@ ul button:hover {
   height: 50px;
   border: 3px solid rgb(71, 152, 151);
   transition: all 0.25s linear;
+  z-index: 2;
 }
 
 .hamburger-btn .hamburger-middle {
@@ -98,21 +99,23 @@ ul button:hover {
 .sidebar {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: end;
   position: fixed;
   top: 0;
-  left: -25%;
+  left: -20rem;
   background-color: rgba(83, 177, 176, 0.9);
 
-  min-width: 25%;
+  max-width: 20rem;
   min-height: 100vh;
 
   transform: translate(0%, 0%);
   transition: transform 500ms ease 0s;
+  z-index: 2;
+  gap: 25vh 0;
 }
 
 .sidebar.open {
-  transform: translate(100%, 0%);
+  transform: translate(20rem, 0%);
 }
 
 .nav-links,
@@ -140,7 +143,7 @@ ul button:hover {
   padding: 20px 0;
   display: block;
   height: auto;
-  font-size: 2vw;
+  font-size: 2rem;
 }
 
 .nav-links a:hover {
@@ -151,17 +154,18 @@ ul button:hover {
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 20px;
-  padding: 20px 0;
+  margin-bottom: 5vh;
 }
 
 .additional-links li {
   display: inline-block;
   text-align: center;
+  width: 40%;
 }
 
 .additional-links img {
-  height: 60%;
-  width: auto;
+  width: 60%;
+  height: auto;
 }
 
 .additional-links img:hover {
@@ -178,7 +182,8 @@ ul button:hover {
 .content-container {
   display: flex;
   justify-content: center;
-  width: 80%;
+  max-width: 1650px;
+  width: 65%;
   padding: 5rem 0;
 }
 
@@ -219,21 +224,27 @@ ul button:hover {
   height: 100%;
 }
 
-.about-background {
+.about-background,
+.contact-background {
   display: flex;
   justify-content: center;
+  width: 100vw;
+}
+
+.about-background {
   background-color: rgb(195, 235, 235);
 }
 
 .about-content {
   justify-content: space-between;
   font-size: 1.5rem;
+  align-items: center;
 }
 
 .about-img {
   background-color: white;
   width: 40%;
-  height: 100%;
+  height: 50rem;
 }
 
 .about-text {
@@ -250,9 +261,47 @@ ul button:hover {
   align-items: center;
 }
 
+.contact-background {
+  background-color: rgb(36, 76, 75);
+}
+
 .contact-content {
   align-items: start;
   gap: 20px;
+  color: white;
+  padding-bottom: 0;
+}
+
+.contact-content h2 {
+  margin: 0;
+  font-size: 3rem;
+  color: white;
+}
+
+.contact-content p {
+  font-size: 1.5rem;
+}
+
+.contact-content label {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-content input,
+.contact-content textarea {
+  height: 100%;
+}
+
+.contact-content input {
+  border-radius: 5px;
+  padding-left: 0.5rem;
+}
+
+.contact-content textarea {
+  padding-top: 0.75rem;
+  padding-left: 0.5rem;
+  border-radius: 12px;
 }
 
 /* table {
@@ -301,6 +350,7 @@ tr td:first-of-type {
 
 .divider {
   border: 2px solid rgb(84, 177, 176);
+  background-color: rgb(84, 177, 176);
   width: 100%;
   border-radius: 75%;
   margin: 3rem 0;
@@ -317,6 +367,7 @@ tr td:first-of-type {
   grid-template-rows: repeat(4, 25% [row-start]);
   grid-template-columns: [first] 20% [second] 80%;
   gap: 0 1rem;
+  color: rgb(71, 152, 151);
 }
 
 .project img {
@@ -350,6 +401,21 @@ tr td:first-of-type {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(71, 152, 151);
+  padding: 2rem;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+
+.skills h2,
+.skills p {
+  margin: 0;
+}
+
+.skills h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .skill-grid {
@@ -358,18 +424,35 @@ tr td:first-of-type {
     "languages frameworks"
     "backend databases";
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 1.5rem 1rem;
+
+  margin-top: 3rem;
 }
 
 .skill-cell {
   display: flex;
 }
 
+.skill-text {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
 .skill-icon {
+  position: relative;
   height: 4rem;
-  width: 4rem;
+  min-width: 4rem;
   background-color: rgb(71, 152, 151);
   border-radius: 100%;
+}
+
+.skill-icon img {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: 50%;
+  width: auto;
 }
 
 .skill-grid .languages {
@@ -386,16 +469,34 @@ tr td:first-of-type {
 }
 
 .contact-form {
+  width: 45rem;
+}
+
+.contact-form-grid {
   display: grid;
   grid-template-columns: repeat(2, 50% [col-start]);
-  grid-template-rows: [first] 15% [second] 15% [third] 55% [fourth] 15%;
+  grid-template-rows: [first] 20% [second] 20% [third] 60%;
   gap: 0rem 1rem;
-  height: 20rem;
-  width: 30rem;
+  height: 30rem;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .contact-form button {
-  margin-top: 1rem;
+  background-color: rgb(235, 248, 248);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  color: rgb(36, 76, 75);
+  margin-bottom: 3rem;
+}
+
+.contact-form button:hover {
+  transition: all 0.3s ease-in;
+  background-color: rgb(84, 177, 176);
+  color: rgb(235, 248, 248);
+  cursor: pointer;
 }
 
 .contact-input {
@@ -423,4 +524,53 @@ tr td:first-of-type {
 
 #input-message textarea {
   resize: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-content {
+    flex-flow: column nowrap;
+    width: 80%;
+    row-gap: 5rem;
+  }
+
+  .about-content .about-text {
+    width: 100%;
+  }
+
+  .about-content .about-img {
+    height: 30rem;
+    width: 30rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: [first] 15% [second] 15% [third] 15% [fourth] 55%;
+    gap: 1rem 0;
+    height: 40rem;
+    width: 100%;
+  }
+
+  #input-name {
+    grid-row: 1/2;
+  }
+
+  #input-email {
+    grid-row: 2/3;
+  }
+
+  #input-subject {
+    grid-row: 3/4;
+  }
+
+  #input-message {
+    grid-row: 4/5;
+  }
+
+  .contact-form button {
+    margin: 3rem 0;
+  }
 }

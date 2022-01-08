@@ -24,19 +24,21 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li>
-            <a href="#projects/skills">Projects/Skills</a>
+            <a href="#projects-skills">Projects/Skills</a>
           </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
         <ul class="additional-links">
           <li>
-            <a href=""><img src="./images/github.png" alt="Github link" /></a>
+            <a href=""
+              ><img src="./images/github-icon-1_white.svg" alt="Github link"
+            /></a>
           </li>
 
           <li>
             <a href=""
-              ><img src="./images/linkedin.png" alt="LinkedIn link"
+              ><img src="./images/linkedin-icon-white.svg" alt="LinkedIn link"
             /></a>
           </li>
         </ul>
@@ -83,11 +85,57 @@
             </div>
           </section>
         </div>
-
         <section
           class="content-container projects-content"
-          id="projects/skills"
+          id="projects-skills"
         >
+          <div class="skill-background">
+            <div class="skills">
+              <h2 class="title">Skills</h2>
+              <div class="text">
+                A ever-growing list of tools I have experience with
+              </div>
+              <div class="skill-grid">
+                <div class="skill-cell languages">
+                  <div class="skill-icon">
+                    <img src="/images/web_dev_white.svg" alt="" />
+                  </div>
+                  <div class="skill-text">
+                    <div>Languages</div>
+                    <p>HTML, CSS, Javascript</p>
+                  </div>
+                </div>
+                <div class="skill-cell frameworks">
+                  <div class="skill-icon">
+                    <img src="/images/web_design_white.svg" alt="" />
+                  </div>
+                  <div class="skill-text">
+                    <div>CSS/Frontend Frameworks</div>
+                    <p>Bootstrap, React, Tailwind</p>
+                  </div>
+                </div>
+                <div class="skill-cell backend">
+                  <div class="skill-icon">
+                    <img src="images/gears_white.svg" alt="" />
+                  </div>
+                  <div class="skill-text">
+                    <div>Backend Tools</div>
+                    <p>Node, Express, Mongoose, React Router</p>
+                  </div>
+                </div>
+                <div class="skill-cell databases">
+                  <div class="skill-icon">
+                    <img src="/images/servers_white.svg" alt="" />
+                  </div>
+                  <div class="skill-text">
+                    <div>Databases</div>
+                    <p>Mongo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="projects">
             <h2>Projects</h2>
             <ul>
@@ -171,85 +219,45 @@
               <tr></tr>
             </tbody>
           </table> -->
-          <div class="skills">
-            <h2 class="title">Skills</h2>
-            <div class="text">
-              A ever-growing list of tools I have experience with
-            </div>
-            <div class="skill-grid">
-              <div class="skill-cell languages">
-                <div class="skill-icon">
-                  <img src="" alt="" />
-                </div>
-                <div class="skill-text">
-                  <div>Languages</div>
-                  <p>HTML, CSS, Javascript</p>
-                </div>
-              </div>
-              <div class="skill-cell frameworks">
-                <div class="skill-icon">
-                  <img src="" alt="" />
-                </div>
-                <div class="skill-text">
-                  <div>CSS/Frontend Frameworks</div>
-                  <p>Bootstrap, React, Tailwind</p>
-                </div>
-              </div>
-              <div class="skill-cell backend">
-                <div class="skill-icon">
-                  <img src="" alt="" />
-                </div>
-                <div class="skill-text">
-                  <div>Backend Tools</div>
-                  <p>Node, Express, Mongoose, React Router</p>
-                </div>
-              </div>
-              <div class="skill-cell databases">
-                <div class="skill-icon">
-                  <img src="" alt="" />
-                </div>
-                <div class="skill-text">
-                  <div>Databases</div>
-                  <p>Mongo</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
-        <section class="content-container contact-content" id="contact">
-          <div>Contact</div>
-          <p>
-            I'm interested in web dev opportunities, but if you would like to
-            ask me general questions feel free to contact me via the form below.
-          </p>
-          <form class="contact-form" action="">
-            <div class="contact-input" id="input-name">
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Name" />
-            </div>
-            <div class="contact-input" id="input-email">
-              <label for="email">Email</label>
-              <input id="email" type="text" placeholder="Email" />
-            </div>
-            <div class="contact-input" id="input-subject">
-              <label for="subject">Subject</label>
-              <input id="subject" type="text" placeholder="Subject" />
-            </div>
-            <div class="contact-input" id="input-message">
-              <label for="message">Message</label>
-              <textarea
-                name=""
-                id="message"
-                cols="50"
-                rows="10"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <button type="submit">Submit</button>
-          </form>
+        <div class="contact-background">
+          <section class="content-container contact-content" id="contact">
+            <h2>Contact</h2>
+            <p>
+              I'm interested in web dev opportunities, but if you would like to
+              ask me general questions feel free to contact me via the form
+              below.
+            </p>
+            <form class="contact-form" action="">
+              <div class="contact-form-grid">
+                <div class="contact-input" id="input-name">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" placeholder="Name" />
+                </div>
+                <div class="contact-input" id="input-email">
+                  <label for="email">Email</label>
+                  <input id="email" type="text" placeholder="Email" />
+                </div>
+                <div class="contact-input" id="input-subject">
+                  <label for="subject">Subject</label>
+                  <input id="subject" type="text" placeholder="Subject" />
+                </div>
+                <div class="contact-input" id="input-message">
+                  <label for="message">Message</label>
+                  <textarea
+                    name=""
+                    id="message"
+                    cols="50"
+                    rows="10"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
 
-          <div>work email here</div>
-        </section>
+              <button type="submit">Submit</button>
+            </form>
+          </section>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>
