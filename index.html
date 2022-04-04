@@ -9,35 +9,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&family=Rubik:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/848410872e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <nav class="sidebar">
-        <!-- <a href="#home"
-          ><img class="homeImg" src="./images/dev.png" alt="Home Logo"
-        /></a> -->
-
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li>
-            <a href="#projects-skills">Projects/Skills</a>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
           </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
         <ul class="additional-links">
           <li>
-            <a href=""
+            <a href="https://github.com/jdel4cruz?tab=repositories"
               ><img src="./images/github-icon-1_white.svg" alt="Github link"
             /></a>
           </li>
 
           <li>
-            <a href=""
+            <a href="https://www.linkedin.com/in/john-de-la-cruz-160bb045/"
               ><img src="./images/linkedin-icon-white.svg" alt="LinkedIn link"
             /></a>
           </li>
@@ -53,55 +56,57 @@
           <div class="hero-text">
             <div>
               <p class="name">John De La Cruz</p>
-              <p class="title">Web Developer</p>
+              <p class="title">Aspiring Web Developer</p>
             </div>
 
             <p class="desc">
-              Former engineer driven by the pursuit of knowledge. Seeking new
-              opportunities in the vast world of web development.
+              Former engineer driven by the pursuit of knowledge. Experienced
+              with HTML, CSS, JS, and React. <br /><br />Currently learning:
+              <br />Tailwind, TypeScript, Unit Testing
             </p>
           </div>
-          <div class="home-img"></div>
         </section>
         <div class="about-background">
           <section class="content-container about-content" id="about">
-            <div class="about-img"></div>
+            <div class="about-img">
+              <img src="./images/Portrait_Photo.jpg" alt="" />
+            </div>
             <div class="about-text">
-              <div>About</div>
+              <h1>About</h1>
               <p>
-                I like learning new things. Having felt restrained in my former
-                career as an engineer, I decided that it wasn't for me and that
-                I wanted a career where I opportunites to learn are endless.
+                I'm driven by new challenges and learning new things. Having
+                felt stagnation in my former career as an engineer, I decided it
+                wasn't for me and that I wanted to find a career where constant
+                growth is necessary so frankly, I don't get bored.
               </p>
               <p>
-                During school, the few coding assignments that were assigned to
-                me were interesting, so so I figured that was a good place to
-                start. Combining that with my desire to create things, it seemed
-                like front-end web development might fit the bill. When looking
-                into online courses, I found an online bootcamp on Udemy for 80%
-                off and figured it be as good a place to start as any. And the
-                rest is history.
+                During my time in college, I found that the coding assignments
+                that were assigned were interesting. The idea of being able to
+                create all kinds of useful applications was extremely compelling
+                to me, so I figured that was a good place to start. After
+                talking with some of my other friends involved in web
+                development, I decided to look into it and I found the Web
+                Developer Bootcamp 2021 on Udemy for 80% off. I figured it be as
+                good a place to start as any, so I checked it out and I've been
+                hooked since.
               </p>
             </div>
           </section>
         </div>
-        <section
-          class="content-container projects-content"
-          id="projects-skills"
-        >
+        <section class="content-container skills-content fadeIn" id="skills">
           <div class="skill-background">
             <div class="skills">
               <h2 class="title">Skills</h2>
-              <div class="text">
-                A ever-growing list of tools I have experience with
-              </div>
+              <p class="text">
+                An ever-growing list of skills I have experience with.
+              </p>
               <div class="skill-grid">
                 <div class="skill-cell languages">
                   <div class="skill-icon">
                     <img src="/images/web_dev_white.svg" alt="" />
                   </div>
                   <div class="skill-text">
-                    <div>Languages</div>
+                    <p>Languages:</p>
                     <p>HTML, CSS, Javascript</p>
                   </div>
                 </div>
@@ -110,7 +115,7 @@
                     <img src="/images/web_design_white.svg" alt="" />
                   </div>
                   <div class="skill-text">
-                    <div>CSS/Frontend Frameworks</div>
+                    <p>CSS/Frontend Frameworks:</p>
                     <p>Bootstrap, React, Tailwind</p>
                   </div>
                 </div>
@@ -119,8 +124,8 @@
                     <img src="images/gears_white.svg" alt="" />
                   </div>
                   <div class="skill-text">
-                    <div>Backend Tools</div>
-                    <p>Node, Express, Mongoose, React Router</p>
+                    <p>Backend Tools:</p>
+                    <p>NodeJS, Express, Mongoose, React Router</p>
                   </div>
                 </div>
                 <div class="skill-cell databases">
@@ -128,133 +133,132 @@
                     <img src="/images/servers_white.svg" alt="" />
                   </div>
                   <div class="skill-text">
-                    <div>Databases</div>
+                    <p>Databases:</p>
                     <p>Mongo</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
+        </section>
+        <section
+          class="content-container projects-content fadeIn"
+          id="projects"
+        >
           <div class="projects">
             <h2>Projects</h2>
             <ul>
-              <li class="project">
-                <img src="./images/placeholder.png" alt="project thumb" />
-                <p>
-                  ex veritatis dignissimos velit totam rem nihil, illum commodi
-                  ullam quidem odit perferendis laudantium maiores sunt ea
-                  necessitatibus temporibus. Excepturi, quod! Hic architecto
-                  est, voluptatibus iusto cum accusamus deserunt adipisci sequi
-                  ratione vitae, minima tempore dolorum illum ullam fugiat
-                  excepturi magni illo nesciunt. Beatae dolorum a itaque minima
-                  officiis! Quibusdam, fuga. Distinctio, autem facilis? Cum nisi
-                  assumenda molestias, voluptate ullam facere aperiam magni et,
-                  perferendis, laborum vel eligendi facilis at itaque laudantium
-                  perspiciatis soluta non adipisci amet dolorem nihil!
-                </p>
-                <div class="labels">
-                  <span class="label">TBD</span>
-                  <span class="label">Super TBD</span>
+              <li class="project" data-project>
+                <div class="project-carousel" data-project-carousel>
+                  <button
+                    class="carousel-button prev"
+                    data-carousel-button="prev"
+                  >
+                    <i class="fa-solid fa-angle-left fa-2xl"></i>
+                  </button>
+                  <button
+                    class="carousel-button next"
+                    data-carousel-button="next"
+                  >
+                    <i class="fa-solid fa-angle-right fa-2xl"></i>
+                  </button>
+                  <ul data-project-carousel-imgs>
+                    <li class="slide" data-active="true">
+                      <img src="./images/PokeApp_1.jpg" alt="PokeApp Img 1" />
+                    </li>
+                    <li class="slide">
+                      <img src="./images/PokeApp_2.jpg" alt="PokeApp Img 2" />
+                    </li>
+                    <li class="slide">
+                      <img src="./images/PokeApp_3.jpg" alt="PokeApp Img 3" />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="project-text">
+                  <div class="project-header">
+                    <h3>PokeApp</h3>
+                    <a href="https://github.com/jdel4cruz/PokeApp"
+                      ><img
+                        src="./images/github-icon-1_green.svg"
+                        alt="PokeApp Repo Link"
+                    /></a>
+                  </div>
+
+                  <p>
+                    A site built with React that displays Pokemon information
+                    pulled from an API called the PokeAPI. Users can look up
+                    information on Pokemon, Pokemon moves, items, and Pokemon
+                    abilties.
+                  </p>
+
+                  <div class="labels">
+                    <span class="label-tag">Key Features: </span>
+                    <span class="label">React</span>
+                    <span class="label">Styled-Components</span>
+                    <span class="label">Responsive Design</span>
+                    <span class="label">GraphQL</span>
+                  </div>
                 </div>
               </li>
-              <div class="divider"></div>
-              <li class="project">
-                <img src="./images/placeholder.png" alt="project thumb" />
-                <p>
-                  ex veritatis dignissimos velit totam rem nihil, illum commodi
-                  ullam quidem odit perferendis laudantium maiores sunt ea
-                  necessitatibus temporibus. Excepturi, quod! Hic architecto
-                  est, voluptatibus iusto cum accusamus deserunt adipisci sequi
-                  ratione vitae, minima tempore dolorum illum ullam fugiat
-                  excepturi magni illo nesciunt. Beatae dolorum a itaque minima
-                  officiis! Quibusdam, fuga. Distinctio, autem facilis? Cum nisi
-                  assumenda molestias, voluptate ullam facere aperiam magni et,
-                  perferendis, laborum vel eligendi facilis at itaque laudantium
-                  perspiciatis soluta non adipisci amet dolorem nihil!
-                </p>
-                <div class="labels">
-                  <span class="label">TBD</span>
-                  <span class="label">Super TBD</span>
-                </div>
-              </li>
-              <div class="divider"></div>
+              <!-- <div class="divider"></div> -->
             </ul>
           </div>
-          <!-- <table class="skills">
-            <thead>
-              <tr>
-                <th colspan="5">Skills</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Languages</td>
-                <td>HTML</td>
-                <td>CSS</td>
-                <td>Javascript</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Frontend Tools</td>
-                <td>ReactJS</td>
-                <td>Bootstrap</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Backend Tools</td>
-                <td>Node</td>
-                <td>NPM</td>
-                <td>Express</td>
-                <td>Mongoose</td>
-              </tr>
-              <tr>
-                <td>Databases</td>
-                <td>Mongo</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr></tr>
-            </tbody>
-          </table> -->
         </section>
+
         <div class="contact-background">
           <section class="content-container contact-content" id="contact">
             <h2>Contact</h2>
             <p>
-              I'm interested in web dev opportunities, but if you would like to
-              ask me general questions feel free to contact me via the form
-              below.
+              If you would like to contact me with general questions or Web
+              Development opportunities, please feel free to contact me via the
+              form below.
             </p>
-            <form class="contact-form" action="">
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://formspree.io/f/xyyodloa"
+              method="POST"
+            >
               <div class="contact-form-grid">
                 <div class="contact-input" id="input-name">
                   <label for="name">Name</label>
-                  <input id="name" type="text" placeholder="Name" />
+                  <input id="name" type="text" placeholder="Name" name="Name" />
                 </div>
                 <div class="contact-input" id="input-email">
                   <label for="email">Email</label>
-                  <input id="email" type="text" placeholder="Email" />
+                  <input
+                    id="email"
+                    type="text"
+                    placeholder="Email"
+                    name="Email"
+                  />
                 </div>
                 <div class="contact-input" id="input-subject">
                   <label for="subject">Subject</label>
-                  <input id="subject" type="text" placeholder="Subject" />
+                  <input
+                    id="subject"
+                    type="text"
+                    placeholder="Subject"
+                    name="Subject"
+                  />
                 </div>
                 <div class="contact-input" id="input-message">
                   <label for="message">Message</label>
                   <textarea
-                    name=""
+                    name="Message"
                     id="message"
                     cols="50"
                     rows="10"
                     placeholder="Message"
+                    required="true"
                   ></textarea>
                 </div>
               </div>
-
-              <button type="submit">Submit</button>
+              <div class="button-status">
+                <button type="submit">Submit</button>
+                <p id="form-status"></p>
+              </div>
             </form>
           </section>
         </div>
