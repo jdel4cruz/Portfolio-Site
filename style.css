@@ -38,24 +38,14 @@ ul {
   list-style: none;
 }
 
-ul button:hover {
-  background-color: grey;
-}
-
-.container {
-  display: flex;
-  position: relative;
-}
-
 .hamburger-btn {
   position: fixed;
-
   top: 3rem;
   right: 3rem;
-
   width: 5rem;
   height: 5rem;
-  border: 3px solid var(--darkGreen2);
+
+  border: 6px solid var(--darkGreen2);
   transition: all 250ms linear;
   z-index: 3;
 }
@@ -66,6 +56,7 @@ ul button:hover {
   left: 10%;
   width: 80%;
   height: 5%;
+
   background: var(--darkGreen2);
   transition: background 250ms ease-in-out;
 }
@@ -113,18 +104,18 @@ ul button:hover {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #45908f;
-
+  gap: 1rem 0;
   width: 25rem;
   min-height: 100vh;
 
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+
+  background-color: #45908f;
   transform: translateX(100%);
   transition: transform 500ms ease 0s;
-  z-index: 3;
-  gap: 1rem 0;
 }
 
 .sidebar.open {
@@ -174,19 +165,16 @@ ul button:hover {
 }
 
 .additional-links li {
-  display: inline-block;
   text-align: center;
   width: 30%;
 }
 
 .additional-links img {
   width: 80%;
-  height: auto;
   padding: 1rem;
 }
 
 .content {
-  overflow: auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -195,7 +183,6 @@ ul button:hover {
 .content-container {
   display: flex;
   justify-content: center;
-  max-width: 1650px;
   width: 70%;
   padding: 5rem 0;
 }
@@ -219,7 +206,7 @@ ul button:hover {
   width: 80%;
 }
 
-.hero-text p {
+.hero-text h1 {
   margin: 0;
   padding: 0;
   font-size: var(--fontXL);
@@ -227,12 +214,7 @@ ul button:hover {
 
 .hero-text .desc {
   font-size: var(--fontMedL);
-}
-
-.home-img {
-  background-color: white;
-  width: 40%;
-  height: 100%;
+  margin: 0;
 }
 
 .about-background,
@@ -247,31 +229,30 @@ ul button:hover {
 }
 
 .about-content {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 5rem;
 }
 
 .about-img {
   width: 40%;
-  height: fit-content;
 }
 
 .about-img img {
   width: 100%;
-  height: auto;
 }
 
 .about-text {
-  width: 50%;
+  flex: 1 1 0;
+  color: white;
 }
 
-.about-text h1 {
+.about-text h2 {
   font-size: var(--fontXL);
-  color: white;
 }
 .about-text p {
   font-size: var(--fontMedL);
-  color: white;
 }
 
 .projects-content,
@@ -286,7 +267,7 @@ ul button:hover {
 }
 
 .contact-background {
-  background-color: var(--darkGreen);
+  background-color: var(--darkGreen2);
 }
 
 .contact-content {
@@ -307,8 +288,7 @@ ul button:hover {
 }
 
 .contact-content label {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   font-size: var(--fontMed);
 }
 
@@ -355,7 +335,6 @@ ul button:hover {
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
-  height: fit-content;
 
   gap: 5rem;
 }
@@ -386,10 +365,10 @@ ul button:hover {
 }
 
 .carousel-button.prev {
-  left: 0.5rem;
+  left: 1rem;
 }
 .carousel-button.next {
-  right: 0.5rem;
+  right: 1rem;
 }
 
 .project-carousel {
@@ -441,7 +420,6 @@ ul button:hover {
 }
 .project-text a img {
   width: 100%;
-  color: var(--darkGreen);
 }
 
 .project-text h3 {
@@ -500,13 +478,13 @@ ul button:hover {
 }
 
 .skills h2 {
-  font-size: var(--fontLrg);
   margin-bottom: 1rem;
+  font-size: var(--fontLrg);
 }
 
 .skills p {
-  font-size: var(--fontMed);
   margin-bottom: 1rem;
+  font-size: var(--fontMed);
 }
 
 .skill-grid {
@@ -515,8 +493,8 @@ ul button:hover {
   grid-template-areas:
     "languages frameworks"
     "backend databases";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr fit-content;
+  grid-template-rows: fit-content fit-content;
+  grid-template-columns: fit-content fit-content;
   gap: 1.5rem 1rem;
 
   margin-top: 3rem;
@@ -544,8 +522,7 @@ ul button:hover {
   position: absolute;
   top: 25%;
   left: 25%;
-  height: 50%;
-  width: auto;
+  width: 50%;
 }
 
 .skill-grid .languages {
@@ -576,19 +553,19 @@ ul button:hover {
 }
 
 .contact-form button {
-  background-color: rgb(235, 248, 248);
+  background-color: var(--lightGreen);
   border: none;
   padding: 1rem 2rem;
   border-radius: 12px;
   font-size: var(--fontMed);
-  color: rgb(36, 76, 75);
+  color: var(--darkGreen2);
   margin-bottom: 3rem;
 }
 
 .contact-form button:hover {
   transition: all 0.3s ease-in;
-  background-color: rgb(84, 177, 176);
-  color: rgb(235, 248, 248);
+  background-color: var(--darkGreen);
+  color: white;
   cursor: pointer;
 }
 
@@ -599,7 +576,6 @@ ul button:hover {
 
 .button-status {
   display: flex;
-
   gap: 1rem;
 
   margin-bottom: 3rem;
@@ -631,7 +607,7 @@ ul button:hover {
   resize: none;
 }
 
-.offScreen {
+/* .offScreen {
   opacity: 0;
   transition: opacity 600ms ease-in, transform 500ms ease-in;
 }
@@ -641,13 +617,13 @@ ul button:hover {
 }
 .offScreen.right {
   transform: translateX(50%);
-}
+} */
 
-.offScreen.left.appear,
+/* .offScreen.left.appear,
 .offScreen.right.appear {
   transform: translateX(0);
   opacity: 1;
-}
+} */
 
 .fadeIn {
   opacity: 0;
@@ -712,10 +688,6 @@ ul button:hover {
     gap: 1rem 0;
     height: 40rem;
     width: 100%;
-  }
-
-  #input-name {
-    grid-row: 1/2;
   }
 
   #input-email {

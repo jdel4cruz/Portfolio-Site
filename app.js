@@ -3,7 +3,7 @@ const sidebar = document.querySelector(".sidebar");
 
 const jumpLinks = document.querySelectorAll('a[href^="#"]');
 const carouselButtons = document.querySelectorAll("[data-carousel-button]");
-const offScreens = document.querySelectorAll(".offScreen");
+// const offScreens = document.querySelectorAll(".offScreen");
 
 const fadeIns = document.querySelectorAll(".fadeIn");
 
@@ -28,19 +28,19 @@ const fadeInObserver = new IntersectionObserver((elements, fadeInObserver) => {
   });
 }, fadeInOptions);
 
-const offScreenObserver = new IntersectionObserver(
-  (elements, offScreenObserver) => {
-    elements.forEach((element) => {
-      if (!element.isIntersecting) {
-        return;
-      }
-      console.log(element.intersectionRatio);
-      element.target.classList.add("appear");
-      offScreenObserver.unobserve(element.target);
-    });
-  },
-  offScreenOptions
-);
+// const offScreenObserver = new IntersectionObserver(
+//   (elements, offScreenObserver) => {
+//     elements.forEach((element) => {
+//       if (!element.isIntersecting) {
+//         return;
+//       }
+//       console.log(element.intersectionRatio);
+//       element.target.classList.add("appear");
+//       offScreenObserver.unobserve(element.target);
+//     });
+//   },
+//   offScreenOptions
+// );
 
 fadeIns.forEach((fadeIn) => {
   fadeInObserver.observe(fadeIn);
