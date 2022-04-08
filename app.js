@@ -46,9 +46,9 @@ fadeIns.forEach((fadeIn) => {
   fadeInObserver.observe(fadeIn);
 });
 
-offScreens.forEach((offScreen) => {
-  offScreenObserver.observe(offScreen);
-});
+// offScreens.forEach((offScreen) => {
+//   offScreenObserver.observe(offScreen);
+// });
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
