@@ -183,7 +183,7 @@ ul {
 .content-container {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 60%;
   padding: 5rem 0;
 }
 
@@ -326,7 +326,7 @@ ul {
   background-color: rgb(84, 177, 176);
   width: 100%;
   border-radius: 75%;
-  margin: 2rem 0;
+  margin: 6rem 0;
 }
 
 .project {
